@@ -32,7 +32,7 @@ jobs:
       - name: Run tests
         run: npm test
       - name: Output information
-        # using env context
+        # Using env context to output env variable
         run: | 
           echo "Mongo username : ${{ env.MONGODB_USERNAME }}"
   deploy:

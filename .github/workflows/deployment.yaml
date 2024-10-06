@@ -33,7 +33,8 @@ jobs:
         run: npm test
       - name: Output information
         # Using env context to output env variable
-        run: | 
+        run: |
+          echo "Mongo DB name : ${{ env.MONGODB_DB_NAME }}"
           echo "Mongo username : ${{ env.MONGODB_USERNAME }}"
   deploy:
     needs: test

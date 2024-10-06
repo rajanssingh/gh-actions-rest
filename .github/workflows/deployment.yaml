@@ -35,11 +35,11 @@ jobs:
         # using env context
         run: | 
           echo "Mongo username : ${{ env.MONGODB_USERNAME }}"
-          echo "Mongo DB name : ${{ env.MONGODB_DB_NAME }}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Output information
         run: |
-          echo "..."
+          echo "Mongo username : ${{ env.MONGODB_USERNAME }}"
+          echo "Mongo DB name : ${{ env.MONGODB_DB_NAME }}"
